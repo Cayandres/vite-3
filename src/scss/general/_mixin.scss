@@ -1,0 +1,26 @@
+@use './variables' as *;
+// le mixin sono come funzioni che asseconda di cosa gli passiamo attivano o disattivano classi
+
+@mixin container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+@mixin containerS{
+    max-width: $container-s-width;
+    margin: 0 auto;
+}
+
+// questo è un pacchettino vhe ci permette di richiaamre rapidamente un display flex
+
+@mixin displayFlex($type: 'both'){
+    display: flex;
+    @if $type == 'vertical'{
+        align-items: center;
+    }@else if $type == 'horizontal'{
+        justify-content: center;
+    }@else if $type == 'both'{
+        align-items: center;
+        justify-content: center;
+    }
+}

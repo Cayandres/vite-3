@@ -1,0 +1,18 @@
+// questa è una sola classe che al suo interno dipendendo da quello che gli passi cambia il suo valore.
+.ht{
+    &-0{
+        height: 0;
+    }
+    &-10{
+        height: 10px;
+    }
+    &-20{
+        height: 20px;
+    }
+    &-30{
+        height: 30px;
+    }
+    &-40{
+        height: 40px;
+    }
+}
