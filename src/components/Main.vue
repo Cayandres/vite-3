@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-    <SearchBar />
+ 
     <div class="container">
         <div class="mainContainer">
             <div class="counterC"><p>Carte Trovate: {{ store.cardsArr.length}}</p></div>
@@ -42,6 +42,7 @@ export default {
     background-color: white;
     
     .counterC{
+        font-weight: 600;
         height: 40px;
         background-color: black;
         color: white;

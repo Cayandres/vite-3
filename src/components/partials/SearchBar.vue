@@ -1,6 +1,12 @@
 <script>
+import { store } from '../../data/store';
 export default {
     name: 'SearchBar',
+    data() {
+        return {
+            store,
+        }
+    },
     
 }
 </script>
@@ -8,10 +14,9 @@ export default {
 <template>
     <div class="container">
         
-        <select name="type" id="type">
-           <option value="1">1</option>
-           <option value="1">2</option>
-           <option value="1">3</option>
+        <select  v-model="store.searchType" name="type" id="type">
+            <option  value="">Select Type</option>
+            <option @click="$emit('search')" v-for="type in store.typeArr" :key="type" :value="type">{{ type }}</option>
         </select>
 
     </div>
